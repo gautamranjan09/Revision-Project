@@ -9,7 +9,13 @@ const AddUser = () => {
 
   function addUserHandler(event) {
     event.preventDefault();
-    console.log(enteredUsername, enteredAge);
+
+    if (
+      enteredUsername.trim().length > 0 &&
+      enteredAge.trim().length > 0 &&
+      enteredAge > 0
+    )
+      console.log(enteredUsername, enteredAge);
 
     setEnteredUsername("");
     setEnteredAge("");
